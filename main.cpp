@@ -26,6 +26,8 @@ int main(int argc, char *argv[]) {
 
 	while(current != "") {
 
+		cout << "lol";
+
 		if (hashtable.exists(current)) {
 
 			index = hashtable.getIndex(current);
@@ -44,6 +46,8 @@ int main(int argc, char *argv[]) {
 				hashtable.update(minheap.getString(i), i);
 			}
 		}
+
+		cout << "made it here";
 
 		else if (!hashtable.exists(current) && minheap.full()) {
 
