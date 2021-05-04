@@ -23,6 +23,7 @@ int main(int argc, char *argv[]) {
 	getline(in, current, ',');
 
 	int index;
+	int f;
 
 	while(current != "") {
 
@@ -60,9 +61,10 @@ int main(int argc, char *argv[]) {
 
 			cout << "3: Current string: " << current << endl;
 
+			f = minheap.getFreq(0);
 			hashtable.deleteEntry(minheap.getString(0));
-			minheap.swapMin(current);
-			hashtable.insertEntry(current);
+			minheap.deleteMin();
+			hashtable.insertEntry(current, f+1);
 
 			for (int i = 0; i < minheap.getCurrentSize(); i++) {
 				hashtable.update(minheap.getString(i), i);

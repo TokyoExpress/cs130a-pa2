@@ -43,7 +43,7 @@ int HT::getIndex(string s) {
 
     for(int i = 0; i < size; i++) {
 
-        q = h + i*i;
+        q = (h + i*i) % size;
 
         if(table[i].entry == s)
             return table[i].index;
@@ -63,7 +63,7 @@ void HT::insertEntry(string s) {
 
 	for (int i = 0; i < size; i++) {
 
-		q = h + i*i;
+		q = (h + i*i) % size;
 
 		if (table[q].entry == "" || table[q].dead == true) {
 			table[q].entry = s;
@@ -84,7 +84,7 @@ void HT::deleteEntry(string s) {
 
 		for (int i = 0; i < size; i++) {
 
-			q = h + i*i;
+			q = (h + i*i) % size;
 
 			if (table[q].entry == "") {
 				return;
@@ -105,7 +105,7 @@ void HT::update(string s, int x) {
 
 		for (int i = 0; i < size; i++) {
 
-			q = h + i*i;
+			q = (h + i*i) % size;
 
 			if (table[q].entry == s) {
 				table[q].index = x;

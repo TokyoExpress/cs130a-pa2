@@ -23,8 +23,7 @@ class MH {
 		int getCurrentSize();
 		string getString(int index);
 		int getFreq(int index);
-		void insert(string entry);
-		void swapMin(string entry);
+		void insert(string entry, int frequency);
 		void deleteMin();
 		bool compare(Node x, Node y);
 		void heapifyUp(int index);
