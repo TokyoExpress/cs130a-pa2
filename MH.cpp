@@ -110,6 +110,7 @@ void MH::heapifyUp(int index){
         swap(heap[index], heap[parent(index)]);
         swaps.push_back(index);
         swaps.push_back(parent(index));
+        cout << swaps[0] << swaps[1] << endl;
         heapifyUp(parent(index));
 
     }
