@@ -32,8 +32,12 @@ int MH::getCurrentSize() {
     return currentSize;
 }
 
-string MH::getString(int index){
+string MH::getString(int index) {
     return heap[index].entry;
+}
+
+int MH::getFreq(int index) {
+	return heap[index].frequency;
 }
 
 void MH::insert(string entry) {

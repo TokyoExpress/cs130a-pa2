@@ -22,6 +22,7 @@ class MH {
 		int right(int index);
 		int getCurrentSize();
 		string getString(int index);
+		int getFreq(int index);
 		void insert(string entry);
 		void swapMin(string entry);
 		void deleteMin();
