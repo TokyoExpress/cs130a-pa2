@@ -92,7 +92,7 @@ void MH::heapifyDown(int index){
 
     cout << min << l << r << endl;
 
-    if (l < min && compare(heap[l], heap[index])) {
+    if (l < currentSize && compare(heap[l], heap[index])) {
 
     	cout << "hello?"<< endl;
 
