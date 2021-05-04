@@ -94,7 +94,8 @@ void MH::heapifyDown(int index){
     if (min != index) {
 
         swap(heap[index], heap[min]);
-        swaps.push_back(index, min);
+        swaps.push_back(index);
+        swaps.push_back(min);
         heapifyDown(min);
 
     }
@@ -107,7 +108,8 @@ void MH::heapifyUp(int index){
     if (index && compare(heap[index], heap[parent(index)])) {
 
         swap(heap[index], heap[parent(index)]);
-        swaps.push_back(index, parent(index));
+        swaps.push_back(index);
+        swaps.push_back(parent(index));
         heapifyUp(parent(index));
 
     }
