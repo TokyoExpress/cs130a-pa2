@@ -69,7 +69,6 @@ void HT::insertEntry(string s) {
 			table[q].entry = s;
 			table[q].index = 0;
 			table[q].dead = false;
-			cout << "finished" << endl;
 			return;
 		}
 
