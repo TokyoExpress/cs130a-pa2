@@ -100,8 +100,6 @@ void HT::deleteEntry(string s) {
 
 void HT::update(string s, int x) {
 
-	cout << "update" << endl;
-
 	int h = hasher(s) % size;
 	int q = 0;
 
