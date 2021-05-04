@@ -25,7 +25,7 @@ int MH::right(int index){
 
 void MH::frequencyUp(int index) {
 	heap[index].frequency++;
-	heapifyDown(0);
+	heapifyDown(index);
 }
 
 int MH::getCurrentSize() {
