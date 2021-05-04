@@ -47,6 +47,7 @@ int main(int argc, char *argv[]) {
 
 			for (int i = 0; i < minheap.getCurrentSize(); i++) {
 				hashtable.update(minheap.getString(i), i);
+				cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
 			}
 		}
 
@@ -58,6 +59,7 @@ int main(int argc, char *argv[]) {
 
 			for (int i = 0; i < minheap.getCurrentSize(); i++) {
 				hashtable.update(minheap.getString(i), i);
+				cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
 			}
 		}
 
