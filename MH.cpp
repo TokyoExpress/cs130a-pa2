@@ -90,14 +90,18 @@ void MH::heapifyDown(int index){
     int r = right(index);
     int min = index;
 
-    cout << "size"  << currentSize << endl;
+    cout << min << l << r << endl;
 
     if (l < min && compare(heap[l], heap[index])) {
+
+    	cout << "hello?"<< endl;
 
         min = l;
 
     }
     if (r < currentSize && compare(heap[r], heap[min])) {
+
+    	cout << "here!" << endl;
 
         min = r;
 
