@@ -34,11 +34,6 @@ int main(int argc, char *argv[]) {
 			index = hashtable.getIndex(current);
 			minheap.frequencyUp(index);
 
-			//for (int i = 0; i < minheap.getCurrentSize(); i++) {
-				//hashtable.update(minheap.getString(i), i);
-				//cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
-			//}
-
 			cout << endl;
 		}
 
@@ -48,11 +43,6 @@ int main(int argc, char *argv[]) {
 
 			minheap.insert(current, 1);
 			hashtable.insertEntry(current);
-
-			//for (int i = 0; i < minheap.getCurrentSize(); i++) {
-				//hashtable.update(minheap.getString(i), i);
-				//cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
-			//}
 
 			cout << endl;
 		}
@@ -67,12 +57,12 @@ int main(int argc, char *argv[]) {
 			hashtable.insertEntry(current);
 			minheap.insert(current, f+1);
 
-			//for (int i = 0; i < minheap.getCurrentSize(); i++) {
-				//hashtable.update(minheap.getString(i), i);
-				//cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
-			//}
-
 			cout << endl;
+		}
+
+		for (int i = 0; i < minheap.getCurrentSize(); i++) {
+			hashtable.update(minheap.getString(i), i);
+			cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
 		}
 
 		getline(in, current, ',');
