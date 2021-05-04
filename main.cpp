@@ -37,6 +37,8 @@ int main(int argc, char *argv[]) {
 				hashtable.update(minheap.getString(i), i);
 				cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
 			}
+
+			cout << endl;
 		}
 
 		else if (!hashtable.exists(current) && !minheap.full()) {
@@ -50,6 +52,8 @@ int main(int argc, char *argv[]) {
 				hashtable.update(minheap.getString(i), i);
 				cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
 			}
+
+			cout << endl;
 		}
 
 		else if (!hashtable.exists(current) && minheap.full()) {
@@ -64,6 +68,8 @@ int main(int argc, char *argv[]) {
 				hashtable.update(minheap.getString(i), i);
 				cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
 			}
+
+			cout << endl;
 		}
 
 		getline(in, current, ',');
