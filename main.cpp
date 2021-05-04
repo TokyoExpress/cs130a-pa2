@@ -51,7 +51,7 @@ int main(int argc, char *argv[]) {
 			f = minheap.getFreq(0);
 			temp = minheap.getString(0);
 			minheap.deleteMin();
-			hashtable.deleteEntry(minheap.getString(0));
+			hashtable.deleteEntry(temp);
 			minheap.insert(current, f+1);
 			hashtable.insertEntry(current);
 		}
