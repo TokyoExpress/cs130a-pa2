@@ -1,0 +1,40 @@
+#ifndef MH_H
+#define MH_H
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+struct Node {
+	string entry;
+	int frequency;
+	int count;
+};
+
+class MH {
+
+	public:
+		MH(int k);
+		void frequencyUp(int index);
+		int parent(int index);
+		int left(int index);
+		int right(int index);
+		int getCurrentSize();
+		string getString(int index);
+		void insert(string entry);
+		void swapMin(string entry);
+		void deleteMin();
+		bool compare(Node x, Node y);
+		void heapifyUp(int index);
+		void heapifyDown(int index);
+		bool full();
+		string printMin();
+
+	private:
+		vector<Node> heap;
+		int size;
+		int counter;
+		int currentSize;
+};
+#endif
