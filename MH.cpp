@@ -42,8 +42,6 @@ int MH::getFreq(int index) {
 
 void MH::insert(string entry, int frequency) {
 
-	cout << "insert" << endl;
-
     Node n;
 
     n.entry = entry;
@@ -60,8 +58,6 @@ void MH::insert(string entry, int frequency) {
 
 void MH::deleteMin(){
 
-	cout << "deletemin" << endl;
-
     if(currentSize == 0)
         return;
 
@@ -74,8 +70,6 @@ void MH::deleteMin(){
 }
 
 void MH::heapifyDown(int index){
-
-	cout << "heapifydown" << endl;
 
     int l = left(index);
     int r = right(index);
@@ -100,8 +94,6 @@ void MH::heapifyDown(int index){
 }
 
 void MH::heapifyUp(int index){
-
-	cout << "heapup" << endl;
 
     if (index && compare(heap[index], heap[parent(index)])) {
 
