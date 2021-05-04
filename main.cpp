@@ -53,8 +53,7 @@ int main(int argc, char *argv[]) {
 			minheap.deleteMin();
 
 			for (int i = 0; i < minheap.getCurrentSize(); i++) {
-				out << minheap.printMin();
-				minheap.deleteMin();
+				cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
 			}
 
 			hashtable.deleteEntry(temp);
