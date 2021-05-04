@@ -47,8 +47,6 @@ int main(int argc, char *argv[]) {
 			}
 		}
 
-		cout << "made it here";
-
 		else if (!hashtable.exists(current) && minheap.full()) {
 
 			minheap.swapMin(current);
