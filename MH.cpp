@@ -38,7 +38,7 @@ string MH::getString(int index){
 
 void MH::insert(string entry) {
 
-	cout << "insert";
+	cout << "insert" << endl;
 
     Node n;
 
@@ -56,7 +56,7 @@ void MH::insert(string entry) {
 
 void MH::swapMin(string entry) {
 
-	cout << "swapmin";
+	cout << "swapmin " << entry << endl;
 
 	heap[0].entry = entry;
 	heap[0].frequency++;
@@ -65,7 +65,7 @@ void MH::swapMin(string entry) {
 
 void MH::deleteMin(){
 
-	cout << "deletemin";
+	cout << "deletemin" << endl;
 
     if(currentSize == 0)
         return;
@@ -80,7 +80,7 @@ void MH::deleteMin(){
 
 void MH::heapifyDown(int index){
 
-	cout << "heapifydown";
+	cout << "heapifydown" << endl;
 
     int l = left(index);
     int r = right(index);
@@ -106,7 +106,7 @@ void MH::heapifyDown(int index){
 
 void MH::heapifyUp(int index){
 
-	cout << "heapup";
+	cout << "heapup" << endl;
 
     if (index && compare(heap[index], heap[parent(index)])) {
 

@@ -26,11 +26,9 @@ int main(int argc, char *argv[]) {
 
 	while(current != "") {
 
-		cout << "lol";
-
 		if (hashtable.exists(current)) {
 
-			cout << "1";
+			cout << "1" << endl;
 
 			index = hashtable.getIndex(current);
 			minheap.frequencyUp(index);
@@ -42,7 +40,7 @@ int main(int argc, char *argv[]) {
 
 		else if (!hashtable.exists(current) && !minheap.full()) {
 
-			cout << "2";
+			cout << "2" << endl;
 
 			minheap.insert(current);
 
@@ -53,7 +51,7 @@ int main(int argc, char *argv[]) {
 
 		else if (!hashtable.exists(current) && minheap.full()) {
 
-			cout << "3";
+			cout << "3" << endl;
 
 			minheap.swapMin(current);
 
