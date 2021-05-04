@@ -94,6 +94,7 @@ void MH::heapifyDown(int index){
     if (min != index) {
 
         swap(heap[index], heap[min]);
+        swaps.push_back(index, min);
         heapifyDown(min);
 
     }
@@ -106,6 +107,7 @@ void MH::heapifyUp(int index){
     if (index && compare(heap[index], heap[parent(index)])) {
 
         swap(heap[index], heap[parent(index)]);
+        swaps.push_back(index, parent(index));
         heapifyUp(parent(index));
 
     }
@@ -126,4 +128,12 @@ bool MH::full(){
 
 string MH::printMin(){
     return heap[0].entry + ":" + to_string(heap[0].frequency) + ",";
+}
+
+vector<int> MH::getSwaps() {
+    return swaps;
+}
+
+void MH::clearSwaps() {
+    swaps.clear();
 }

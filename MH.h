@@ -30,9 +30,12 @@ class MH {
 		void heapifyDown(int index);
 		bool full();
 		string printMin();
+		void clearSwaps();
+		vector<int> getSwaps();
 
 	private:
 		vector<Node> heap;
+		vector<int> swaps;
 		int size;
 		int counter;
 		int currentSize;
