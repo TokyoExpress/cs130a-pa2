@@ -44,6 +44,7 @@ int main(int argc, char *argv[]) {
 			cout << "2" << endl;
 
 			minheap.insert(current);
+			hashtable.insertEntry(current);
 
 			for (int i = 0; i < minheap.getCurrentSize(); i++) {
 				hashtable.update(minheap.getString(i), i);
@@ -55,7 +56,9 @@ int main(int argc, char *argv[]) {
 
 			cout << "3" << endl;
 
+			hashtable.deleteEntry(minheap.getString(0));
 			minheap.swapMin(current);
+			hashtable.insertEntry(current);
 
 			for (int i = 0; i < minheap.getCurrentSize(); i++) {
 				hashtable.update(minheap.getString(i), i);
