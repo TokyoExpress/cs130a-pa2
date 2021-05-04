@@ -80,7 +80,7 @@ int main(int argc, char *argv[]) {
 		minheap.deleteMin();
 	}
 
-	out << minheap.printMin();
+	out << minheap.printMin() << endl;
 
 	out.close();
 
