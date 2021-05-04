@@ -54,6 +54,10 @@ void MH::insert(string entry, int frequency) {
     currentSize++;
     counter++;
 
+    for (int i = 0; i < getCurrentSize(); i++) {
+                cout << getString(i) << ":" << getFreq(i) << " ";
+            }
+
     heapifyUp(currentSize - 1);
 
 }
