@@ -61,6 +61,11 @@ int main(int argc, char *argv[]) {
 			cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
 		}
 
+		for (int i = 0; i < size - 1; i++) {
+			hashtable.update(minheap.getString(i), i);
+			cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
+		}
+
 		minheap.clearSwaps();
 
 		getline(in, current, ',');
