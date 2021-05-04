@@ -56,7 +56,7 @@ int main(int argc, char *argv[]) {
 			hashtable.insertEntry(current);
 		}
 
-		cout << minheap.getSwaps()[0] << endl;
+		cout << "here" << minheap.getSwaps()[0] << endl;
 
 		for (int i = 0; i < minheap.getSwaps().size() - 1; i++) {
 			hashtable.update(minheap.getString(minheap.getSwaps()[i]), i);
