@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
 			hashtable.deleteEntry(minheap.getString(0));
 			minheap.deleteMin();
 			hashtable.insertEntry(current);
-			minheap.insert(current, f+1)
+			minheap.insert(current, f+1);
 
 			for (int i = 0; i < minheap.getCurrentSize(); i++) {
 				hashtable.update(minheap.getString(i), i);
