@@ -12,7 +12,7 @@ MH::MH(int k) {
 }
 
 int MH::parent(int index){
-    return (index+1)/2;
+    return (index-1)/2;
 }
 
 int MH::left(int index){
