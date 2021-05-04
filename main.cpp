@@ -24,6 +24,7 @@ int main(int argc, char *argv[]) {
 
 	int index;
 	int f;
+	string temp;
 
 	while(current != "") {
 
@@ -48,10 +49,11 @@ int main(int argc, char *argv[]) {
 			cout << "3: Current string: " << current << endl;
 
 			f = minheap.getFreq(0);
-			hashtable.deleteEntry(minheap.getString(0));
+			temp = minheap.getString(0);
 			minheap.deleteMin();
-			hashtable.insertEntry(current);
+			hashtable.deleteEntry(minheap.getString(0));
 			minheap.insert(current, f+1);
+			hashtable.insertEntry(current);
 		}
 
 		for (int i = 0; i < minheap.getCurrentSize(); i++) {
