@@ -51,11 +51,6 @@ int main(int argc, char *argv[]) {
 			f = minheap.getFreq(0);
 			temp = minheap.getString(0);
 			minheap.deleteMin();
-
-			for (int i = 0; i < minheap.getCurrentSize(); i++) {
-				cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
-			}
-
 			hashtable.deleteEntry(temp);
 			minheap.insert(current, f+1);
 			hashtable.insertEntry(current);
@@ -75,7 +70,7 @@ int main(int argc, char *argv[]) {
 
 	out.open(argv[2]);
 
-	for (int i = 0; i < minheap.getCurrentSize(); i++) {
+	for (int i = 0; i < size - 1; i++) {
 		out << minheap.printMin();
 		minheap.deleteMin();
 	}
