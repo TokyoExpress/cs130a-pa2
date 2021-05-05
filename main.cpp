@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
 		}
 		minheap.clearSwaps();
 
-		for (int i = 0; i < size - 1; i++) {
+		for (int i = 0; i < size; i++) {
 			cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
 		}
 		cout << endl << endl;
