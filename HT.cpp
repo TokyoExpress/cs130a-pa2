@@ -109,6 +109,7 @@ void HT::update(string s, int x) {
 
 			if (table[q].entry == s) {
 				table[q].index = x;
+				return;
 			}
 	}
 }
