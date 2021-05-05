@@ -29,11 +29,12 @@ class MH {
 		void heapifyUp(int index);
 		void heapifyDown(int index);
 		bool full();
-		string printMin();
+		string print(int index);
 		void clearSwaps();
 		int getSwap(int i);
 		bool swapsEmpty();
 		int getSwapsSize();
+		void sort();
 
 	private:
 		vector<Node> heap;

@@ -120,8 +120,8 @@ bool MH::full(){
     return currentSize == size;
 }
 
-string MH::printMin(){
-    return heap[0].entry + ":" + to_string(heap[0].frequency) + ",";
+string MH::print(int index){
+    return heap[index].entry + ":" + to_string(heap[0].frequency) + ",";
 }
 
 bool MH::swapsEmpty() {
@@ -138,4 +138,25 @@ int MH::getSwap(int i) {
 
 void MH::clearSwaps() {
     swaps.clear();
+}
+
+void MH::sort(){
+
+    vector<Node> sorted = heap;
+
+    for(int i = 0; i < currentSize - 1; i++) {
+
+        int min = i;
+
+        for(int j = i + 1; j < currentSize; j++) {
+
+            if(compare(sorted[j], sorted[min]))
+                smallest = j;
+
+        }
+
+        swap(sorted[i], sorted[min]);
+    }
+
+    heap = sorted;
 }
