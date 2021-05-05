@@ -83,7 +83,6 @@ int main(int argc, char *argv[]) {
 		//}
 
 		getline(in, current, ',');
-		cout << endl;
 
 	}
 
