@@ -151,7 +151,7 @@ void MH::sort(){
         for(int j = i + 1; j < currentSize; j++) {
 
             if(compare(sorted[j], sorted[min]))
-                smallest = j;
+                min = j;
 
         }
 
