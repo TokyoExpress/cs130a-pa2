@@ -82,6 +82,12 @@ int main(int argc, char *argv[]) {
 			hashtable.insertEntry(current);
 		}
 
+		for (int i = 0; i < size - 1; i++) {
+			cout << minheap.getString(i) << ":" << minheap.getFreq(i);
+		}
+
+		cout << endl;
+
 		getline(in, current, ',');
 
 	}
