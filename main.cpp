@@ -33,8 +33,10 @@ int main(int argc, char *argv[]) {
 			index = hashtable.getIndex(current);
 			minheap.frequencyUp(index);
 
-			for (int i = 0; i < size; i++) {
-				hashtable.update(minheap.getString(i), i);
+			if (!minheap.swapsEmpty()) {
+				for (int i = 0; i < minheap.getSwapsSize(); i++) {
+					hashtable.update(minheap.getString(minheap.getSwap(i)), minheap.getSwap(i));
+				}
 			}
 			minheap.clearSwaps();
 		}
@@ -43,8 +45,10 @@ int main(int argc, char *argv[]) {
 
 			minheap.insert(current, 1);
 
-			for (int i = 0; i < size; i++) {
-				hashtable.update(minheap.getString(i), i);
+			if (!minheap.swapsEmpty()) {
+				for (int i = 0; i < minheap.getSwapsSize(); i++) {
+					hashtable.update(minheap.getString(minheap.getSwap(i)), minheap.getSwap(i));
+				}
 			}
 			minheap.clearSwaps();
 
@@ -57,30 +61,25 @@ int main(int argc, char *argv[]) {
 			temp = minheap.getString(0);
 			minheap.deleteMin();
 
-			for (int i = 0; i < size; i++) {
-				hashtable.update(minheap.getString(i), i);
+			if (!minheap.swapsEmpty()) {
+				for (int i = 0; i < minheap.getSwapsSize(); i++) {
+					hashtable.update(minheap.getString(minheap.getSwap(i)), minheap.getSwap(i));
+				}
 			}
 			minheap.clearSwaps();
 
 			hashtable.deleteEntry(temp);
 			minheap.insert(current, f+1);
 
-			for (int i = 0; i < size; i++) {
-				hashtable.update(minheap.getString(i), i);
+			if (!minheap.swapsEmpty()) {
+				for (int i = 0; i < minheap.getSwapsSize(); i++) {
+					hashtable.update(minheap.getString(minheap.getSwap(i)), minheap.getSwap(i));
+				}
 			}
 			minheap.clearSwaps();
 
 			hashtable.insertEntry(current);
 		}
-
-		//if (!minheap.swapsEmpty()) {
-
-			//for (int i = 0; i < minheap.getSwapsSize(); i++) {
-				//cout << "updating" << minheap.getSwap(i) << endl;
-				//hashtable.update(minheap.getString(minheap.getSwap(i)), minheap.getSwap(i));
-			//}
-
-		//}
 
 		getline(in, current, ',');
 
