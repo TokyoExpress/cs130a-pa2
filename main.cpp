@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
 		if (!minheap.swapsEmpty()) {
 
 			for (int i = 0; i < minheap.getSwaps().size() - 1; i++) {
-				hashtable.update(minheap.getString(minheap.getSwaps()[i]), minheaps.getSwaps()[i]);
+				hashtable.update(minheap.getString(minheap.getSwaps()[i]), minheap.getSwaps()[i]);
 			}
 
 		}
