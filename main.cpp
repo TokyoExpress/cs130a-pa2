@@ -58,19 +58,19 @@ int main(int argc, char *argv[]) {
 
 		cout << "here" << endl;
 
-		//if (!minheap.swapsEmpty()) {
+		if (!minheap.swapsEmpty()) {
 
-			//for (int i = 0; i < minheap.getSwaps().size(); i++) {
-				//cout << "updating" << minheap.getSwaps()[i] << endl;
-				//hashtable.update(minheap.getString(minheap.getSwaps()[i]), minheap.getSwaps()[i]);
-			//}
+			for (int i = 0; i < minheap.getSwapsSize(); i++) {
+				cout << "updating" << minheap.getSwaps()[i] << endl;
+				hashtable.update(minheap.getString(minheap.getSwap(i)), minheap.getSwaps(i));
+			}
 
-		//}
+		}
 
 		cout << "here2" << endl;
 
 		for (int i = 0; i < size; i++) {
-			hashtable.update(minheap.getString(i), i);
+			//hashtable.update(minheap.getString(i), i);
 			cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
 		}
 

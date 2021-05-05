@@ -138,8 +138,12 @@ bool MH::swapsEmpty() {
     return swaps.size() == 0;
 }
 
-vector<int> MH::getSwaps() {
-    return swaps;
+int MH::getSwapsSize() {
+    return swaps.size();
+}
+
+int MH::getSwap(int i) {
+    return swaps[i];
 }
 
 void MH::clearSwaps() {
