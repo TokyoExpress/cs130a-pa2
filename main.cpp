@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
 		if (!minheap.swapsEmpty()) {
 
 			for (int i = 0; i < minheap.getSwapsSize(); i++) {
-				cout << "updating" << minheap.getSwap()[i] << endl;
+				cout << "updating" << minheap.getSwap(i) << endl;
 				hashtable.update(minheap.getString(minheap.getSwap(i)), minheap.getSwap(i));
 			}
 
