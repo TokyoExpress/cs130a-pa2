@@ -28,11 +28,11 @@ int main(int argc, char *argv[]) {
 
 	while(current != "") {
 
-		//cout << "current:" << current << " ";
+		cout << "current:" << current << " ";
 
 		if (hashtable.exists(current)) {
 
-			//cout << "1: " << hashtable.getIndex(current) << endl;
+			cout << "1: " << hashtable.getIndex(current) << endl;
 
 			index = hashtable.getIndex(current);
 			minheap.frequencyUp(index);
@@ -40,7 +40,7 @@ int main(int argc, char *argv[]) {
 
 		else if (!hashtable.exists(current) && !minheap.full()) {
 
-			//cout << "2" << endl;
+			cout << "2" << endl;
 
 			minheap.insert(current, 1);
 			hashtable.insertEntry(current);
@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
 
 		else if (!hashtable.exists(current) && minheap.full()) {
 
-			//cout << "3" << endl;
+			cout << "3" << endl;
 
 			f = minheap.getFreq(0);
 			temp = minheap.getString(0);
@@ -65,10 +65,10 @@ int main(int argc, char *argv[]) {
 		}
 		minheap.clearSwaps();
 
-		//for (int i = 0; i < size - 1; i++) {
-			//cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
-		//}
-		//cout << endl;
+		for (int i = 0; i < size - 1; i++) {
+			cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
+		}
+		cout << endl;
 
 		getline(in, current, ',');
 
