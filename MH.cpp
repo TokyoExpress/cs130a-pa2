@@ -134,6 +134,10 @@ string MH::printMin(){
     return heap[0].entry + ":" + to_string(heap[0].frequency) + ",";
 }
 
+bool MH::swapsEmpty() {
+    return swaps.size() == 0;
+}
+
 vector<int> MH::getSwaps() {
     return swaps;
 }

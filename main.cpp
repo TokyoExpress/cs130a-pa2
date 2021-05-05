@@ -58,8 +58,12 @@ int main(int argc, char *argv[]) {
 
 		cout << "here" << endl;
 
-		for (int i = 0; i < minheap.getSwaps().size() - 1; i++) {
-			hashtable.update(minheap.getString(minheap.getSwaps()[i]), i);
+		if (!minheap.swapsEmpty()) {
+
+			for (int i = 0; i < minheap.getSwaps().size() - 1; i++) {
+				hashtable.update(minheap.getString(minheap.getSwaps()[i]), i);
+			}
+
 		}
 
 		cout << "here2" << endl;

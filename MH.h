@@ -32,6 +32,7 @@ class MH {
 		string printMin();
 		void clearSwaps();
 		vector<int> getSwaps();
+		bool swapsEmpty();
 
 	private:
 		vector<Node> heap;
