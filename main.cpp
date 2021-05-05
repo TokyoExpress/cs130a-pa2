@@ -69,10 +69,10 @@ int main(int argc, char *argv[]) {
 
 		cout << "here2" << endl;
 
-		for (int i = 0; i < size; i++) {
+		//for (int i = 0; i < size; i++) {
 			//hashtable.update(minheap.getString(i), i);
-			cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
-		}
+			//cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
+		//}
 
 		cout << "clearswaps" << endl;
 		minheap.clearSwaps();
