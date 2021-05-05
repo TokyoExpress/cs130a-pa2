@@ -103,7 +103,10 @@ void HT::update(string s, int x) {
 
 			q = (h + i*i) % size;
 
-			if (table[q].entry == s) {
+			if (table[q].entry == "")
+				return;
+
+			if (table[q].entry == s && table[q].dead == false) {
 				table[q].index = x;
 				return;
 			}
