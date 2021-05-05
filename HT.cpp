@@ -56,8 +56,6 @@ int HT::getIndex(string s) {
 
 void HT::insertEntry(string s) {
 
-	cout << "htinsert" << endl;
-
 	int h = hasher(s) % size;
 	int q = 0;
 
@@ -76,8 +74,6 @@ void HT::insertEntry(string s) {
 }
 
 void HT::deleteEntry(string s) {
-
-	cout << "htdelete" << endl;
 
 	int h = hasher(s) % size;
 	int q = 0;
