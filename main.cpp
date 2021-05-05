@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
 
 			index = hashtable.getIndex(current);
 			minheap.frequencyUp(index);
-			
+
 			for (int i = 0; i < size; i++) {
 				hashtable.update(minheap.getString(i), i);
 			}
@@ -101,6 +101,8 @@ int main(int argc, char *argv[]) {
 		out << minheap.printMin();
 		minheap.deleteMin();
 	}
+
+	cout << "seg?" << endl;
 
 	out << minheap.printMin() << endl;
 
