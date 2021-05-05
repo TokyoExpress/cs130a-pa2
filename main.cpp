@@ -28,6 +28,8 @@ int main(int argc, char *argv[]) {
 
 	while(current != "") {
 
+		cout << "current:" << current << endl;
+
 		if (hashtable.exists(current)) {
 
 			index = hashtable.getIndex(current);
@@ -83,7 +85,7 @@ int main(int argc, char *argv[]) {
 		}
 
 		for (int i = 0; i < size - 1; i++) {
-			cout << minheap.getString(i) << ":" << minheap.getFreq(i);
+			cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
 		}
 
 		cout << endl;
