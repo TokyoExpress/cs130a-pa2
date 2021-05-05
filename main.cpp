@@ -104,8 +104,6 @@ int main(int argc, char *argv[]) {
 
 	cout << "seg?" << endl;
 
-	out << minheap.printMin() << endl;
-
 	out.close();
 
 	return 0;
