@@ -34,6 +34,11 @@ int main(int argc, char *argv[]) {
 
 			index = hashtable.getIndex(current);
 			minheap.frequencyUp(index);
+			
+			for (int i = 0; i < size; i++) {
+				hashtable.update(minheap.getString(i), i);
+			}
+			minheap.clearSwaps();
 		}
 
 		else if (!hashtable.exists(current) && !minheap.full()) {
@@ -41,6 +46,12 @@ int main(int argc, char *argv[]) {
 			cout << "2: Current string: " << current << endl;
 
 			minheap.insert(current, 1);
+
+			for (int i = 0; i < size; i++) {
+				hashtable.update(minheap.getString(i), i);
+			}
+			minheap.clearSwaps();
+
 			hashtable.insertEntry(current);
 		}
 
@@ -51,12 +62,22 @@ int main(int argc, char *argv[]) {
 			f = minheap.getFreq(0);
 			temp = minheap.getString(0);
 			minheap.deleteMin();
+
+			for (int i = 0; i < size; i++) {
+				hashtable.update(minheap.getString(i), i);
+			}
+			minheap.clearSwaps();
+
 			hashtable.deleteEntry(temp);
 			minheap.insert(current, f+1);
+
+			for (int i = 0; i < size; i++) {
+				hashtable.update(minheap.getString(i), i);
+			}
+			minheap.clearSwaps();
+
 			hashtable.insertEntry(current);
 		}
-
-		cout << "here" << endl;
 
 		//if (!minheap.swapsEmpty()) {
 
@@ -66,16 +87,6 @@ int main(int argc, char *argv[]) {
 			//}
 
 		//}
-
-		cout << "here2" << endl;
-
-		for (int i = 0; i < size; i++) {
-			hashtable.update(minheap.getString(i), i);
-			cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
-		}
-
-		cout << "clearswaps" << endl;
-		minheap.clearSwaps();
 
 		getline(in, current, ',');
 		cout << endl;
