@@ -69,13 +69,6 @@ int main(int argc, char *argv[]) {
 			temp = minheap.getString(0);
 			minheap.deleteMin();
 
-			if (!minheap.swapsEmpty()) {
-				for (int i = 0; i < minheap.getSwapsSize(); i++) {
-					hashtable.update(minheap.getString(minheap.getSwap(i)), minheap.getSwap(i));
-				}
-			}
-			minheap.clearSwaps();
-
 			minheap.insert(current, f+1);
 
 			if (!minheap.swapsEmpty()) {
