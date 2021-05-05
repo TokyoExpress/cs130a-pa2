@@ -90,6 +90,12 @@ int main(int argc, char *argv[]) {
 
 	out.open(argv[2]);
 
+	for (int i = 0; i < size - 1; i++) {
+		out << minheap.printMin();
+		minheap.deleteMin();
+	}
+
+	out << minheap.printMin() << endl;
 
 	out.close();
 
