@@ -68,7 +68,7 @@ int main(int argc, char *argv[]) {
 		for (int i = 0; i < size - 1; i++) {
 			cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
 		}
-		cout << endl;
+		cout << endl << endl;
 
 		getline(in, current, ',');
 
