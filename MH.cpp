@@ -114,7 +114,7 @@ void MH::heapifyUp(int index){
 
     }
 
-    cout << "swaps size:", swaps.size() << endl;
+    cout << "swaps size:" << swaps.size() << endl;
 }
 
 bool MH::compare(Node x, Node y){
