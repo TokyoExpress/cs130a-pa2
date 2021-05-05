@@ -33,7 +33,7 @@ HT::HT(int K) {
 }
 
 bool HT::exists(string s) {
-	return getIndex(s) != -1;
+	return (getIndex(s) != -1 || ;
 }
 
 int HT::getIndex(string s) {
@@ -45,7 +45,7 @@ int HT::getIndex(string s) {
 
         q = (h + i*i) % size;
 
-        if(table[i].entry == s)
+        if(table[i].entry == s && table[i].dead == false)
             return table[i].index;
 
     }
