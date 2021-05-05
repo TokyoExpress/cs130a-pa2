@@ -62,6 +62,8 @@ int main(int argc, char *argv[]) {
 			hashtable.update(minheap.getString(minheap.getSwaps()[i]), i);
 		}
 
+		cout << "here2" << endl;
+
 		for (int i = 0; i < size - 1; i++) {
 			hashtable.update(minheap.getString(i), i);
 			cout << minheap.getString(i) << ":" << minheap.getFreq(i) << " ";
