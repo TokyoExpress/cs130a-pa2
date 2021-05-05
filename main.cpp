@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
 
 		if (hashtable.exists(current)) {
 
-			cout << "1" << endl;
+			cout << "1: " << hashtable.getIndex(current) << endl;
 
 			index = hashtable.getIndex(current);
 			minheap.frequencyUp(index);
