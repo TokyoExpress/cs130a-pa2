@@ -93,7 +93,7 @@ int main(int argc, char *argv[]) {
 	minheap.sort();
 
     for(int i = 0; i < minheap.getCurrentSize(); i++) {
-        output << minheap.print(i);
+        out << minheap.print(i);
 	}
 
 	//for (int i = 0; i < size - 1; i++) {
