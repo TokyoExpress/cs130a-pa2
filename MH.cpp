@@ -52,7 +52,7 @@ void MH::insert(string entry, int frequency) {
     currentSize++;
     counter++;
 
-    heapifyUp(currentSize - 1);
+    heapifyUp(currentSize);
 
 }
 
