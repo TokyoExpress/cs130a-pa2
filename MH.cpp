@@ -121,7 +121,7 @@ bool MH::full(){
 }
 
 string MH::print(int index){
-    return heap[index].entry + ":" + to_string(heap[0].frequency) + ",";
+    return heap[index].entry + ":" + to_string(heap[index].frequency) + ",";
 }
 
 bool MH::swapsEmpty() {
